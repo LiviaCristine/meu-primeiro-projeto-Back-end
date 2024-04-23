@@ -90,10 +90,12 @@ async function deletaMulher(request, response) {
 
 
 
-app.use(router.get('/mulheres', mostraMulheres)) // configurei a rota GET /mulheres
-app.use(router.post('/mulheres', criaMulher)) // configurei rota POST /mulheres
-app.use(router.patch('/mulheres/:id', corrigeMulher)) // configurei rota PATCH /mulheres:id
-app.use(router.delete('/mulheres/:id', deletaMulher)) //configurei rota delete /mulheres/:id
-app.listen(porta, mostraPorta)
+app.get('/mulheres', mostraMulheres); // Rota GET /mulheres
+app.post('/mulheres', criaMulher); // Rota POST /mulheres
+app.patch('/mulheres/:id', corrigeMulher); // Rota PATCH /mulheres/:id
+app.delete('/mulheres/:id', deletaMulher); // Rota DELETE /mulheres/:id
+
+app.listen(porta, mostraPorta); // Inicia o servidor na porta especificada
+
 
 // https://back-end-nuo7.onrender.com/mulheres
