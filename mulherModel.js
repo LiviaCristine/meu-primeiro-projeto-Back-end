@@ -11,7 +11,7 @@ const MulherSchema = new mongoose.Schema({
     },
     citacao: {
         type: String,
-        reuired: true,
+        required: true,
     },
     minibio: {
         type: String,
